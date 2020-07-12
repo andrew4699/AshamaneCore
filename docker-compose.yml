@@ -1,0 +1,18 @@
+version: '3.5'
+
+services:
+  # WoW
+  wow:
+    image: xyz/wow
+    container_name: xyz-wow
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    network_mode: "host"
+    volumes:
+      - "./:/xyz/"
+    ports:
+      - "8080:8080"
+    # environment:
+    #   - xxxxxx=xxxxx
+    # command: bash -c "cp -r /usr/local/node_modules_api_install_dir/node_modules/. /opt/api/node_modules/ && yarn dev"
