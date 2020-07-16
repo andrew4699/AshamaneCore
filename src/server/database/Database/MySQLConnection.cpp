@@ -31,6 +31,8 @@
 #include <mysql.h>
 #include <mysqld_error.h>
 
+#define CR_INVALID_CONN_HANDLE 2048
+
 MySQLConnectionInfo::MySQLConnectionInfo(std::string const& infoString)
 {
     Tokenizer tokens(infoString, ';');
